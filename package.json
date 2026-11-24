@@ -5,12 +5,15 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
   },
   "author": "Adem Cemil YALCIN",
   "license": "ISC",
   "dependencies": {
     "express":"latest",
-    "ejs":"latest"
+    "ejs":"latest",
+    "eslint": "^9.0.0",
+    "@eslint/js": "^9.0.0"
   }
 }
