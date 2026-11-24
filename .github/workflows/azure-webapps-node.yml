@@ -38,16 +38,16 @@ jobs:
           run: npm test -- --ci --coverage
 
       # - name: SonarQube Scan
-          uses: SonarSource/scan-action@v4
-          env:
-            SONAR_TOKEN: ${{ .secret.SONAR_TOKEN }}
-            SONAR_URL: ${{ .secret.SONAR_URL }}
-          with:
-             args: >
-               -Dsonar.projectKey=my-node-service
-               -Dsonar.sources=src
-               -Dsonar.tests=tests
-               -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
+          # uses: SonarSource/scan-action@v4
+          # env:
+          #   SONAR_TOKEN: ${{ .secret.SONAR_TOKEN }}
+          #   SONAR_URL: ${{ .secret.SONAR_URL }}
+          # with:
+          #    args: >
+          #      -Dsonar.projectKey=my-node-service
+          #      -Dsonar.sources=src
+          #      -Dsonar.tests=tests
+          #      -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
 
         - name: Build application
           run: npm run build --if-present
